@@ -1,6 +1,20 @@
 # Mateular
 
-A Angular frontend for [Mateomat](https://github.com/OhmNoobs/Matomat), generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+Angular frontend for [Matomat](https://github.com/OhmNoobs/Matomat), generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+
+## Prerequisites
+
+- Make sure you have installed [node.js](https://nodejs.org/en/)
+- Set up Matomat
+
+## Getting started
+
+- Clone this repository ```git clone https://github.com/OhmNoobs/Mateular.git```
+- Change to project directory
+- Run ```npm install```
+- Run ```ng serve``` or ```npm start```
+- Navigate to `http://localhost:4200/`
+- Be happy 😊
 
 ## Development server
 
