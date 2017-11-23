@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
+import { MatomatService } from './services/matomat.service';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
+      providers: [MatomatService],
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
+import { MatomatService } from './services/matomat.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MatomatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
