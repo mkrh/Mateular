@@ -6,19 +6,20 @@ Angular frontend for [Matomat](https://github.com/OhmNoobs/Matomat), generated w
 
 - Make sure you have installed [node.js](https://nodejs.org/en/)
 - Set up Matomat
+- Launch Matomat development server on `http://localhost:5000/`
 
 ## Getting started
 
 - Clone this repository ```git clone https://github.com/OhmNoobs/Mateular.git```
 - Change to project directory
 - Run ```npm install```
-- Run ```ng serve``` or ```npm start```
+- Run ```npm start```
 - Navigate to `http://localhost:4200/`
 - Be happy 😊
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. This ensures that the proxy configuration is used. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
