@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
+import { ItemService } from './services/item.service';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule
   ],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
