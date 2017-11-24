@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Item } from '../../model/item';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ItemService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {
+  }
 
+  public getAll(): Observable<Item[]> {
+    return this.httpClient.get<Item[]>('/proxy/get/items');
+  }
 }
