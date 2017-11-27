@@ -1,9 +1,25 @@
 <header>
-  <div class="navbar navbar-dark bg-dark">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand">{{title}}</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">{{title}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add Items</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
 </header>
 
 <main role="main">
@@ -12,6 +28,9 @@
 
 <footer class="footer">
   <div class="container">
-    <span class="text-muted"><a href="https://github.com/OhmNoobs/Matomat">Matomat</a> and <a href="https://github.com/OhmNoobs/Mateular">Mateular</a></span>
+    <span class="text-muted">
+      <a href="https://github.com/OhmNoobs/Matomat">Matomat</a> and
+      <a href="https://github.com/OhmNoobs/Mateular">Mateular</a>
+    </span>
   </div>
 </footer>
