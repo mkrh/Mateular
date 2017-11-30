@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 
 import { ItemOverviewComponent } from './item-overview.component';
-import { ItemService } from '../../services/item.service';
+import { ItemService } from '../../../services/item.service';
 
 describe('ItemOverviewComponent', () => {
   let component: ItemOverviewComponent;
