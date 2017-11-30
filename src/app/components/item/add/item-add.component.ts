@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemService } from '../../../services/item.service';
+import { Item } from '../../../../model/item';
 
 @Component({
   selector: 'app-item-add',
@@ -6,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemAddComponent implements OnInit {
 
-  constructor() { }
+  item: Item;
+
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
+    this.item = new Item();
   }
 
+  onSubmit() {
+    this.itemService.add(this.item).subscribe(
+      response => console.log(response),
+      error => alert('something went wrong')
+    );
+  }
+
+  onFileChange(e) {
+    console.log(e.srcElement.files);
+  }
 }

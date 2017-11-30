@@ -12,4 +12,8 @@ export class ItemService {
   public getAll(): Observable<Item[]> {
     return this.httpClient.get<Item[]>('/proxy/get/items');
   }
+
+  public add(newItem: Item) {
+    return this.httpClient.post('/proxy/add/item', newItem);
+  }
 }
