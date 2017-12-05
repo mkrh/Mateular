@@ -14,6 +14,7 @@ export class ItemAddComponent implements OnInit {
 
   ngOnInit() {
     this.item = new Item();
+    this.item.color = '#FFFFFF';
   }
 
   onSubmit() {
