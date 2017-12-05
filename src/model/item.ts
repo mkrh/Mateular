@@ -3,5 +3,6 @@ export class Item {
   title: string;
   price: number;
   image_link: string;
+  color: string;
   number: number;
 }
