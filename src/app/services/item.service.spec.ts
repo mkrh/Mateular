@@ -48,6 +48,7 @@ describe('ItemService', () => {
       title: 'Mate',
       price: 1.0,
       image_link: 'mate.jpg',
+      color: '',
       number: 0
     };
     itemService.add(item);
