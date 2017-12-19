@@ -1,14 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Observable } from 'rxjs/Observable';
 
 import { ItemOverviewComponent } from './item-overview.component';
 import { ItemService } from '../../../services/item.service';
+import { fakeAsync, tick } from '@angular/core/testing';
+import { Item } from '../../../../model/item';
 
 describe('ItemOverviewComponent', () => {
   let component: ItemOverviewComponent;
   let itemService;
-  const items = [{id: 1}];
+  const items: Item[] = [{
+    id: 1,
+    title: 'testItem',
+    price: 2.4,
+    color: '#ffdeff',
+    image_link: 'link',
+    number: 10
+  }];
 
   beforeEach(() => {
     itemService = jasmine.createSpyObj('itemService', ['getAll']);
@@ -23,6 +30,6 @@ describe('ItemOverviewComponent', () => {
   it('should get all items on init', () => {
     component.ngOnInit();
     expect(itemService.getAll).toHaveBeenCalled();
-    // expect(component.items).toEqual(this.items);
+    expect(component.items).toEqual(items);
   });
 });
