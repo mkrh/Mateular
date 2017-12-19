@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 
@@ -15,9 +14,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
   background-color: #f5f5f5;
 }
 
@@ -27,25 +25,6 @@ footer p {
 
 .navbar {
   margin-bottom: 0;
-}
-
-.jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0;
-  background-color: #fff;
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
-
-.jumbotron-heading {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
 }
 
 .album {
@@ -71,4 +50,15 @@ footer p {
 .card-text {
   font-size: 2rem;
   text-align: center;
+}
+
+.img-preview {
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  float: left;
+}
+
+.img-preview > img {
+  height: 100%;
 }

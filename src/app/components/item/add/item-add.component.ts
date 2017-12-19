@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms/src/model';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { ItemService } from '../../../services/item.service';
 import { Item } from '../../../../model/item';
+import { Event } from '@angular/router/src/events';
 
 @Component({
   selector: 'app-item-add',
@@ -10,9 +11,12 @@ import { Item } from '../../../../model/item';
 })
 export class ItemAddComponent implements OnInit {
   private defaultColor = '#ffffff';
+  private reader = new FileReader();
   item: Item;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) {
+    this.reader.addEventListener('load', () => this.loadImage(), false);
+   }
 
   ngOnInit() {
     this.item = new Item();
@@ -29,7 +33,14 @@ export class ItemAddComponent implements OnInit {
     );
   }
 
-  onFileChange(e) {
-    console.log(e.srcElement.files);
+  private onFileChange(e) {
+    const file = e.srcElement.files[0];
+    if (file) {
+      this.reader.readAsDataURL(file);
+    }
+  }
+
+  private loadImage() {
+    this.item.image_link = this.reader.result;
   }
 }
