@@ -40,6 +40,7 @@ footer p {
   align-items: center;
   justify-content: center;
   height: 20rem;
+  cursor: pointer;
 }
 
 .card > img {
