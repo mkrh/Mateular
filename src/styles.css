@@ -53,9 +53,10 @@ footer p {
 }
 
 .img-preview {
+  margin-top: 1rem;
   align-items: center;
   justify-content: center;
-  height: 20rem;
+  height: 15rem;
   float: left;
 }
 

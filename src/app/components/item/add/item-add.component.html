@@ -9,7 +9,7 @@
 
       <div class="form-group">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-5">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
             <label>Title</label>
             <input class="form-control" type="text" name="title" [(ngModel)]="item.title">
           </div>
@@ -18,7 +18,7 @@
 
       <div class="form-group">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-5">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
             <label>Price</label>
             <input class="form-control" type="string" name="price" [(ngModel)]="item.price">
           </div>
@@ -27,7 +27,7 @@
 
       <div class="form-group">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-5">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
             <label>Color</label>
               <input type="color" name="color" [(ngModel)]="item.color">
           </div>
@@ -36,7 +36,7 @@
 
       <div class="form-group">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-5">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
             <label>Image</label>
             <input class="form-control" type="file" accept=".jpg, .jpeg, .png" name="image" (change)="onFileChange($event)">
             <div *ngIf="item.image_link" class="form-control img-preview text-center">
@@ -48,7 +48,7 @@
 
       <div class="form-group">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-md-5">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
             <button class="form-control btn btn-primary" type="submit">Submit</button>
           </div>
         </div>
