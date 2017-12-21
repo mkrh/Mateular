@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms/src/model';
-import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { FormGroup, NgForm } from '@angular/forms';
 import { ItemService } from '../../../services/item.service';
 import { Item } from '../../../../model/item';
-import { Event } from '@angular/router/src/events';
 
 @Component({
   selector: 'app-item-add',
@@ -16,7 +14,7 @@ export class ItemAddComponent implements OnInit {
 
   constructor(private itemService: ItemService) {
     this.reader.addEventListener('load', () => this.loadImage(), false);
-   }
+  }
 
   ngOnInit() {
     this.item = new Item();
@@ -34,9 +32,9 @@ export class ItemAddComponent implements OnInit {
   }
 
   private onFileChange(e) {
-    const file = e.srcElement.files[0];
-    if (file) {
-      this.reader.readAsDataURL(file);
+    if (e.target && e.target.files.length > 0) {
+      const file = e.target.files[0];
+        this.reader.readAsDataURL(file);
     }
   }
 
