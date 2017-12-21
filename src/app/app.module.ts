@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { ItemService } from './services/item.service';
 import { ItemOverviewComponent } from './components/item/overview/item-overview.component';
 import { ItemAddComponent } from './components/item/add/item-add.component';
+import { ItemListComponent } from './components/item/list/item-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
-    ItemAddComponent
+    ItemAddComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,

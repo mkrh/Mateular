@@ -1,0 +1,26 @@
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items">
+              <th scope="row">{{ item.id }}</th>
+              <td>{{ item.title }}</td>
+              <td>{{ item.price }}</td>
+              <td>{{ item.color }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
