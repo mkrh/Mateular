@@ -6,18 +6,21 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ItemService } from './services/item.service';
 import { ItemOverviewComponent } from './components/item/overview/item-overview.component';
 import { ItemAddComponent } from './components/item/add/item-add.component';
 import { ItemListComponent } from './components/item/list/item-list.component';
+import { LoginComponent } from './components/login/login.component';
 
+import { ItemService } from './services/item.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
     ItemAddComponent,
-    ItemListComponent
+    ItemListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { ItemListComponent } from './components/item/list/item-list.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ItemService],
+  providers: [ItemService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

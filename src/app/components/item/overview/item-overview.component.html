@@ -1,18 +1,14 @@
-<div class="album text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10">
-        <div *ngFor="let item of items" class="card" (click)="onItemClick(item)">
-          <img src="{{ item.image }}" alt="Card image cap">
-          <p class="card-text">{{ item.title }}</p>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <h3>Produkte:</h3>
-        <!-- <p *ngFor="let cartItem of selectedItems.values">
-          {{ cartItem.item.title }}
-        </p> -->
-      </div>
+<div class="row">
+  <div class="col-xs-10">
+    <div *ngFor="let item of items" class="card" (click)="onItemClick(item)">
+      <img src="{{ item.image }}" alt="Card image cap">
+      <p class="card-text">{{ item.title }}</p>
     </div>
+  </div>
+  <div class="col-xs-2">
+    <h3>Produkte:</h3>
+    <!-- <p *ngFor="let cartItem of selectedItems.values">
+          {{ cartItem.item.title }}
+     </p> -->
   </div>
 </div>
