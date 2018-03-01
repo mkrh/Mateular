@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Item } from '../../model/item';
 import { Observable } from 'rxjs/Observable';
+import { Item } from '../../model/item';
+import { Login } from '../../model/login';
 
 @Injectable()
 export class LoginService {
@@ -9,11 +10,11 @@ export class LoginService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public login(): Observable<Item[]> {
-    return this.httpClient.post<Item[]>('/proxy/login', { username: 'admin', password: 'default' });
+  public login(login: Login): Observable<any> {
+    return this.httpClient.post<any>('/proxy/login', login);
   }
 
-  public logout(): Observable<Item[]> {
-    return this.httpClient.post<Item[]>('/proxy/logout', null);
+  public logout(login: Login): Observable<any> {
+    return this.httpClient.post<any>('/proxy/logout', null);
   }
 }
