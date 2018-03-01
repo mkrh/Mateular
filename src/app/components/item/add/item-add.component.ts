@@ -24,7 +24,7 @@ export class ItemAddComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.itemService.add(this.item).subscribe(
       response => {
-        console.log(response);
+        alert('item succesfully added');
         if (form) { form.resetForm({ color: this.defaultColor }); }
       },
       error => alert('something went wrong')
@@ -39,6 +39,6 @@ export class ItemAddComponent implements OnInit {
   }
 
   private loadImage() {
-    this.item.image_link = this.reader.result;
+    this.item.image = this.reader.result;
   }
 }

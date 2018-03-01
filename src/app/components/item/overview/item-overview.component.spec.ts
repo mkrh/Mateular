@@ -13,7 +13,7 @@ describe('ItemOverviewComponent', () => {
     title: 'testItem',
     price: 2.4,
     color: '#ffdeff',
-    image_link: 'link',
+    image: 'link',
     number: 10
   }];
 

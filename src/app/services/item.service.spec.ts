@@ -47,7 +47,7 @@ describe('ItemService', () => {
       id: 0,
       title: 'Mate',
       price: 1.0,
-      image_link: 'mate.jpg',
+      image: 'mate.jpg',
       color: '',
       number: 0
     };
