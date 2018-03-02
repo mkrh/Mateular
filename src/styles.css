@@ -65,17 +65,38 @@ footer p {
   height: 100%;
 }
 
-.delete-button {
-  background: transparent;
-  border: 1px solid #f00;
-  border-radius: 2em;
-  color: #f00;
-  display: inline-block;
-  font-size: 12px;
-  height: 20px;
-  line-height: 2px;
-  margin: 0 0 8px;
-  padding: 0;
+.color-preview {
+  border: 1px solid;
+  width: 40px;
+  height: 40px;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.td-content-center {
   text-align: center;
-  width: 20px;
+}
+
+.tc-xs {
+  width: 5%;
+}
+
+.tc-s {
+  width: 10%;
+}
+
+/* ======== Icon-Section ======== */
+
+.ic-delete {
+  content: url('./assets/ic-delete.svg');
+}
+
+.ic-edit {
+  content: url('./assets/ic-edit.svg');
+}
+
+.ic-check {
+  content: url('./assets/ic-check-circle.svg');
 }

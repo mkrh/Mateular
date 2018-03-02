@@ -9,6 +9,8 @@ import { Item } from '../../../../model/item';
 export class ItemListComponent implements OnInit {
 
   items: Item[];
+  selectedItem: Item;
+
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
@@ -18,8 +20,20 @@ export class ItemListComponent implements OnInit {
   onDelete(id: number) {
     this.itemService.delete(id).subscribe(
       response => {
-        document.getElementById(id.toString()).remove();
+        document.getElementById(`item-${id.toString()}`).remove();
       }
     );
+  }
+
+  onEdit(item: Item) {
+    this.selectedItem = item;
+  }
+
+  onSave(item: Item) {
+    this.itemService.save(item).subscribe(
+      item => {
+        this.selectedItem = null;
+        console.log(item);
+      });
   }
 }
