@@ -38,8 +38,8 @@
       <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
         <label>Image</label>
         <input class="form-control" type="file" accept=".jpg, .jpeg, .png" name="image" (change)="onFileChange($event)">
-        <div *ngIf="item.image_link" class="form-control img-preview text-center">
-          <img name="imagePreview" alt="Image preview" [src]="item.image_link">
+        <div *ngIf="item.image" class="form-control img-preview text-center">
+          <img name="imagePreview" alt="Image preview" [src]="item.image">
         </div>
       </div>
     </div>

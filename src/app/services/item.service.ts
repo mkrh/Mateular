@@ -16,4 +16,8 @@ export class ItemService {
   public add(newItem: Item) {
     return this.httpClient.post('/proxy/add/item', newItem);
   }
+
+  public delete(id: number) {
+    return this.httpClient.delete(`/proxy/delete/item/${id}/`);
+  }
 }

@@ -1,26 +1,26 @@
-<div class="album text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Title</th>
-              <th scope="col">Price</th>
-              <th scope="col">Color</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of items">
-              <th scope="row">{{ item.id }}</th>
-              <td>{{ item.title }}</td>
-              <td>{{ item.price }}</td>
-              <td>{{ item.color }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+          <th scope="col">Color</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="itemList">
+        <tr *ngFor="let item of items" id="{{item.id}}">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.title }}</td>
+          <td>{{ item.price }}</td>
+          <td><input type="color" name="color" [(ngModel)]="item.color"></td>
+          <td>
+            <button class="delete-button" (click)="onDelete(item.id)">x</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

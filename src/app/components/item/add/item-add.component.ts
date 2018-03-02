@@ -31,14 +31,14 @@ export class ItemAddComponent implements OnInit {
     );
   }
 
-  private onFileChange(e) {
+  public onFileChange(e) {
     if (e.target && e.target.files.length > 0) {
       const file = e.target.files[0];
         this.reader.readAsDataURL(file);
     }
   }
 
-  private loadImage() {
+  public loadImage() {
     this.item.image = this.reader.result;
   }
 }

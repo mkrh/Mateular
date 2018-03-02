@@ -15,4 +15,11 @@ export class ItemListComponent implements OnInit {
     this.itemService.getAll().subscribe(items => this.items = items);
   }
 
+  onDelete(id: number) {
+    this.itemService.delete(id).subscribe(
+      response => {
+        document.getElementById(id.toString()).remove();
+      }
+    );
+  }
 }
