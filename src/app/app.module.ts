@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +27,9 @@ import { LoginService } from './services/login.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [ItemService, LoginService],
   bootstrap: [AppComponent]
