@@ -61,14 +61,25 @@ footer p {
   float: left;
 }
 
+.img-preview-sm {
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  float: left;
+}
+
 .img-preview > img {
+  height: 100%;
+}
+
+.img-preview-sm > img {
   height: 100%;
 }
 
 .color-preview {
   border: 1px solid;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .table {

@@ -7,6 +7,7 @@
           <th scope="col">Title</th>
           <th scope="col">Price</th>
           <th scope="col">Color</th>
+          <th scope="col">Image</th>
           <th scope="col" class="tc-s">Delete</th>
           <th scope="col" class="tc-s">Edit</th>
         </tr>
@@ -20,6 +21,9 @@
             <td>{{ item.price }}</td>
             <td>
               <div class="color-preview" [style.background]="item.color"></div>
+            </td>
+            <td>
+              <img name="imagePreview" class="img-preview-sm" alt="Image preview" [src]="item.image">
             </td>
             <td class="td-content-center">
               <button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">
@@ -39,6 +43,9 @@
             <td><input class="form-control" type="text" name="price" [(ngModel)]="item.price"></td>
             <td>
               <input type="color" name="color" [(ngModel)]="item.color">
+            </td>
+            <td>
+              <img name="imagePreview" class="img-preview-sm" alt="Image preview" [src]="item.image">
             </td>
             <td class="td-content-center">
               <button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">

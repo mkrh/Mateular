@@ -34,6 +34,8 @@ export class ItemListComponent implements OnInit {
       item => {
         this.selectedItem = null;
         console.log(item);
-      });
+    }, err => {
+      this.selectedItem = null;
+    });
   }
 }
