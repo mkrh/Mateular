@@ -11,19 +11,18 @@ export class ItemService {
   }
 
   public getAll(): Observable<Item[]> {
-    return this.httpClient.get<Item[]>('/proxy/get/items');
+    return this.httpClient.get<Item[]>('/proxy/api/get/items');
   }
 
   public add(newItem: Item) {
-    return this.httpClient.post('/proxy/add/item', newItem);
+    return this.httpClient.post('/proxy/api/add/item', newItem);
   }
 
   save(item: Item): any {
-    //throw new Error("Method not implemented.");
-    return Observable.of({});
+    return this.httpClient.put(`/proxy/api/update/item`, item);
   }
 
   public delete(id: number) {
-    return this.httpClient.delete(`/proxy/delete/item/${id}/`);
+    return this.httpClient.delete(`/proxy/api/delete/item/${id}/`);
   }
 }

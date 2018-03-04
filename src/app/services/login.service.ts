@@ -11,10 +11,10 @@ export class LoginService {
   }
 
   public login(login: Login): Observable<any> {
-    return this.httpClient.post<any>('/proxy/login', login);
+    return this.httpClient.post<any>('/proxy/api/login', login);
   }
 
   public logout(login: Login): Observable<any> {
-    return this.httpClient.post<any>('/proxy/logout', null);
+    return this.httpClient.post<any>('/proxy/api/logout', null);
   }
 }
